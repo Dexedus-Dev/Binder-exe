@@ -8,7 +8,7 @@ If you understand something or have questions, please [Email me](mailto:dexedusd
 ## Workflow Diagram - EXE Binder
 
 ```mermaid
-graph LR
+graph TD
     A[Start] --> B[User Inputs EXE File One and Two or via args]
     B --> C[embed_files.py reads EXE files as bytes]
     C --> D[Generate embedded dict in loader.py]
@@ -18,3 +18,12 @@ graph LR
     G --> H[Output: Single EXE that runs both original programs]
     H --> I[Done]
 
+    style A fill:#4CAF50,stroke:#ffffff,stroke-width:2px
+    style B fill:#FFEB3B,stroke:#000000,stroke-width:2px
+    style C fill:#03A9F4,stroke:#ffffff,stroke-width:2px
+    style D fill:#9C27B0,stroke:#ffffff,stroke-width:2px
+    style E fill:#FF5722,stroke:#ffffff,stroke-width:2px
+    style F fill:#00BCD4,stroke:#ffffff,stroke-width:2px
+    style G fill:#8BC34A,stroke:#ffffff,stroke-width:2px
+    style H fill:#FFC107,stroke:#ffffff,stroke-width:2px
+    style I fill:#673AB7,stroke:#ffffff,stroke-width:2px
