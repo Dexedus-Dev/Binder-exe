@@ -8,11 +8,14 @@ If you have any questions or if something is unclear, please feel free to [email
 
 ```mermaid
 graph TD
-    A[Start] --> B[User inputs EXE File One and Two or via command-line arguments]
+    A[Start] --> B[User Inputs EXE File One and Two or via args]
     B --> C[embed_files.py reads EXE files as bytes]
-    C --> D[Generates embedded dictionary in loader.py]
-    D --> E[loader.py writes EXEs to temporary files]
-    E --> F[Each EXE is executed using threading and subprocess]
-    F --> G[main.py optionally compiles loader.py into a single EXE using Nuitka]
-    G --> H[Output: A single EXE that runs both original programs]
-    H --> I[Done]
+    C --> D[Generate embedded dict in loader.py]
+    D --> E[loader.py writes EXEs to temp files]
+    E --> F[Run each EXE using threading and subprocess]
+    F --> G{Build with Nuitka?}
+    G -- Yes --> H[main.py builds loader.py into one EXE using Nuitka]
+    G -- No --> I[Skip build step]
+    H --> J[Output: Single EXE that runs both original programs]
+    I --> J
+    J --> K[Done]
