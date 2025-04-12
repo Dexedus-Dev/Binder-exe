@@ -1,6 +1,5 @@
 # Hello, I'm EQ.
 
-Hi!  
 I tried to make a program that compiles multiple programs into one, called **Binder**.  
 I'm not very good at English — all of this is done using Google Translate.  
 If you understand something or have questions, please [Email me](mailto:dexedusd@gmail.com)
