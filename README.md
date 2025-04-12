@@ -7,8 +7,6 @@ If you understand something or have questions, please [Email me](mailto:dexedusd
 
 ## Workflow Diagram - EXE Binder
 
-
-%%{init: {"theme": "base", "themeVariables": { "primaryColor": "#ffffff", "primaryTextColor": "#000000", "nodeBorder": "#999999", "fontSize": "16px", "fontFamily": "Arial"}}}%%
 ```mermaid
 graph TD
     A[Start] --> B[User Inputs EXE File One and Two or via args]
