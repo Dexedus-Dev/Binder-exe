@@ -9,11 +9,11 @@ If you understand something or have questions, please [Email me](mailto:dexedusd
 
 ```mermaid
 graph LR
-    A[Start] --> B[User Inputs EXE File One and Two (or via args)]
+    A[Start] --> B[User Inputs EXE File One and Two or via args]
     B --> C[embed_files.py reads EXE files as bytes]
     C --> D[Generate embedded dict in loader.py]
     D --> E[loader.py writes EXEs to temp files]
-    E --> F[Run each EXE using threading + subprocess]
+    E --> F[Run each EXE using threading and subprocess]
     F --> G[main.py optionally builds loader.py into one EXE using Nuitka]
     G --> H[Output: Single EXE that runs both original programs]
     H --> I[Done]
