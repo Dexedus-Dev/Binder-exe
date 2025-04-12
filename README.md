@@ -18,13 +18,13 @@ graph TD
     G --> H[Output: Single EXE for both programs]
     H --> I[Done]
 
-    style A fill:#4CAF50,stroke:#ffffff,stroke-width:2px
-    style B fill:#FFEB3B,stroke:#ffffff,stroke-width:2px
-    style C fill:#03A9F4,stroke:#ffffff,stroke-width:2px
-    style D fill:#9C27B0,stroke:#ffffff,stroke-width:2px
-    style E fill:#FF5722,stroke:#ffffff,stroke-width:2px
-    style F fill:#00BCD4,stroke:#ffffff,stroke-width:2px
-    style G fill:#8BC34A,stroke:#ffffff,stroke-width:2px
-    style H fill:#FFC107,stroke:#ffffff,stroke-width:2px
-    style I fill:#673AB7,stroke:#ffffff,stroke-width:2px
+    style A fill:#212121,stroke:#ffffff,stroke-width:2px
+    style B fill:#424242,stroke:#ffffff,stroke-width:2px
+    style C fill:#616161,stroke:#ffffff,stroke-width:2px
+    style D fill:#757575,stroke:#ffffff,stroke-width:2px
+    style E fill:#9E9E9E,stroke:#ffffff,stroke-width:2px
+    style F fill:#BDBDBD,stroke:#ffffff,stroke-width:2px
+    style G fill:#E0E0E0,stroke:#ffffff,stroke-width:2px
+    style H fill:#EEEEEE,stroke:#ffffff,stroke-width:2px
+    style I fill:#FFFFFF,stroke:#000000,stroke-width:2px
 
