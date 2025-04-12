@@ -9,17 +9,17 @@ If you understand something or have questions, please [Email me](mailto:dexedusd
 
 ```mermaid
 graph TD
-    A[Start] --> B[User Inputs EXE File One and Two or via args]
+    A[Start] --> B[User Inputs EXE File 1 and 2 or via args]
     B --> C[embed_files.py reads EXE files as bytes]
     C --> D[Generate embedded dict in loader.py]
     D --> E[loader.py writes EXEs to temp files]
-    E --> F[Run each EXE using threading and subprocess]
-    F --> G[main.py optionally builds loader.py into one EXE using Nuitka]
-    G --> H[Output: Single EXE that runs both original programs]
+    E --> F[Run EXEs with threading and subprocess]
+    F --> G[main.py builds loader.py into one EXE with Nuitka]
+    G --> H[Output: Single EXE for both programs]
     H --> I[Done]
 
     style A fill:#4CAF50,stroke:#ffffff,stroke-width:2px
-    style B fill:#FFEB3B,stroke:#000000,stroke-width:2px
+    style B fill:#FFEB3B,stroke:#ffffff,stroke-width:2px
     style C fill:#03A9F4,stroke:#ffffff,stroke-width:2px
     style D fill:#9C27B0,stroke:#ffffff,stroke-width:2px
     style E fill:#FF5722,stroke:#ffffff,stroke-width:2px
@@ -27,3 +27,4 @@ graph TD
     style G fill:#8BC34A,stroke:#ffffff,stroke-width:2px
     style H fill:#FFC107,stroke:#ffffff,stroke-width:2px
     style I fill:#673AB7,stroke:#ffffff,stroke-width:2px
+
