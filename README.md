@@ -8,8 +8,8 @@ If you understand something or have questions, please [Email me](mailto:dexedusd
 ## Workflow Diagram - EXE Binder
 
 ```mermaid
-graph TD
-    A[Start] --> B[User Inputs EXE File 1 & 2 (or via args)]
+graph LR
+    A[Start] --> B[User Inputs EXE File 1 and 2 (or via args)]
     B --> C[embed_files.py reads EXE files as bytes]
     C --> D[Generate embedded dict in loader.py]
     D --> E[loader.py writes EXEs to temp files]
