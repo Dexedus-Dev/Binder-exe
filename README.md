@@ -13,9 +13,9 @@ graph TD
     C --> D[Generate embedded dict in loader.py]
     D --> E[loader.py writes EXEs to temp files]
     E --> F[Run each EXE using threading and subprocess]
-    F --> G{Build with Nuitka?}
+    F --> G{Build Single EXE with Nuitka?}
     G -- Yes --> H[main.py builds loader.py into one EXE using Nuitka]
-    G -- No --> I[Skip build step]
+    G -- No  --> I[Proceed without building single EXE]
     H --> J[Output: Single EXE that runs both original programs]
     I --> J
     J --> K[Done]
