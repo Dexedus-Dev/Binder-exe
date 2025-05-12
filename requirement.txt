@@ -1,1 +1,2 @@
 nuitka
+PyQt5
