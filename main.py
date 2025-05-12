@@ -1,6 +1,8 @@
 import os
 import subprocess
 import sys
+import shutil
+
 
 def gen_embed(file, file2):
     file = file.strip('"')
@@ -31,7 +33,7 @@ def gen_embed(file, file2):
         print("[!] Failed to run embed_files.py:", str(e))
         return False
 
-def build_payload(payload='loader.py', output='output.exe', icon=False, icon_path=None):
+def build_payload(payload='loader.py', output='output.exe', icon=False, icon_path=None, output_directory='Output'):
     if not os.path.isfile(payload):
         print(f"[!] Error: Payload not found -> {payload}")
         return
@@ -39,11 +41,12 @@ def build_payload(payload='loader.py', output='output.exe', icon=False, icon_pat
     if icon and (not icon_path or not os.path.isfile(icon_path)):
         print("[!] Error: Icon path is invalid or not found.")
         return
-
+    
+    os.makedirs(output_directory, exist_ok=True)
     cmd = [
-        'nuitka',
+        sys.executable, '-m', 'nuitka',
         '--onefile',
-        '--windows-disable-console',
+        '--windows-console-mode=disable',
         f'--output-filename={output}',
     ]
 
@@ -55,9 +58,25 @@ def build_payload(payload='loader.py', output='output.exe', icon=False, icon_pat
     try:
         print("[*] Building payload using Nuitka...")
         subprocess.run(cmd, check=True)
+        output_path = os.path.join(output_directory, output)
+        if os.path.exists(output_path):
+            os.remove(output_path)
+
+        os.rename(output, output_path)
+        name_only = os.path.splitext(payload)[0]
+        clear(name_only)
         print(f"[+] Build complete: {output}")
     except subprocess.CalledProcessError as e:
         print("[!] Error during build:", e)
+
+def clear(name):
+    if os.path.exists('.gitignore'):
+        os.remove('.gitignore')
+    for suffix in ['.build', '.dist', '.onefile-build']:
+        folder = f'{name}{suffix}'
+        if os.path.exists(folder):
+            shutil.rmtree(folder)
+
 
 def main():
     print("="*50)
