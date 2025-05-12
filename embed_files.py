@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import os
 import sys
 import base64
@@ -124,4 +123,4 @@ if __name__ == '__main__':
     file_paths = [file1, file2]
     embedded_files = generate_embedded_files_dict(file_paths)
     generate_loader_file(embedded_files)
->>>>>>> 106fba9748d2cbb0241442c2c3e772ac92fabbbe
+
