@@ -101,8 +101,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-..")
-        build_payload(icon=icon, icon_path=icon_path)
 
-if __name__ == '__main__':
-    main()
