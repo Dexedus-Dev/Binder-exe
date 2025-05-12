@@ -1,5 +1,7 @@
 # Hello, I'm EQ.
 
+# Version 1.0.Bata
+
 I created a program called **Binder** that combines multiple executable files into one.  
 I'm not very fluent in English — most of this was written using Google Translate.  
 If you have any questions or if something is unclear, please feel free to [email me](mailto:dexedusd@gmail.com).
